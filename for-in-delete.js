@@ -24,7 +24,7 @@ for (var key in values) {
 }
 
 /*
-  In this next example, we are accessing the property names themselves. Uncomment the code below, run it and look atwhat prints in the console.
+  In this next example, we are accessing the property names themselves. Uncomment the code below, run it and look at what prints in the console.
 */
 
 for (var key in values) {
@@ -46,6 +46,7 @@ function showValues(obj) {
   }
 
   return arr
+
 }
 
 ////////// PROBLEM 2 //////////
