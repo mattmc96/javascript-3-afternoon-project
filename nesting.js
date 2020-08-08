@@ -9,8 +9,7 @@
 ////////// PROBLEM 1 //////////
 
 // Do not edit the code below.
-var employees = [
-  {
+var employees = [{
     "firstName": "Von",
     "lastName": "Budibent",
     "email": "vbudibent0@163.com",
@@ -53,16 +52,15 @@ var employees = [
 
 //Code Here
 function employeeUpdater() {
-  for (let i = 0; i < employees.length; i++)
-    for (let j = 0; j < employees.length; j++)
-      if (arr[i] = 'Theo') {
-        return arr[i].splice(2, 4)
-      } else if {
-        (arr[j] = 'Lorie'){
-        return arr[j].splice(4, 4, 'HR')
-      }
+  for (let i = 0; i < employees.length; i++) {
+    if (employees[i]['firstName'] === 'Theo') {
+      delete employees[i]
+    } else if (employees[i]['firstName'] === 'Lorie') {
+      employees[i]['department'] = 'HR'
+    }
+  }
+  return employees
 }
-
 
 
 ////////// PROBLEM 2 //////////
@@ -80,7 +78,16 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 //Code Here
-
+const removeDuplicates = () => {
+  for (let i = 0; i < workplaceAccidents.length; i++) {
+    for (let x = i + 1; x < workplaceAccidents.length; x++) {
+      if (workplaceAccidents[i] === workplaceAccidents[x]) {
+        workplaceAccidents.splice(x, 1)
+      }
+    }
+  }
+  return workplaceAccidents
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -88,8 +95,7 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 // Do not edit the code below.
 var cat = {
   name: 'Fluffy',
-  catFriends: [
-    {
+  catFriends: [{
       name: 'Grumpy',
       activities: ['be grumpy', 'eat food']
     },
@@ -108,8 +114,10 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+const grumpyActivity = cat.catFriends[0].activities[1]
+
+
+const fluffy2ndFriend = cat.catFriends[1].name
 
 
 
@@ -120,8 +128,7 @@ var myCar = {
   make: 'Toyota',
   model: 'Corolla',
   year: 1992,
-  accidents: [
-    {
+  accidents: [{
       date: '3/15/93',
       damage: '$5,000',
       atFaultForAccident: true
@@ -150,13 +157,25 @@ var myCar = {
 */
 
 //Code Here
-
+const recordCleaner = () => {
+  for (i = 0; i < myCar.accidents.length; i++) {
+    if (myCar.accidents[i].atFaultForAccident === true) {
+      myCar.accidents[i].atFaultForAccident = false
+    }
+  }
+  return myCar
+}
 
 
 ////////// PROBLEM 5 //////////
 
 // Do not edit the code below.
-var numsArr = [[1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
+var numsArr = [
+  [1, 2, 3, 4],
+  [5, 6],
+  [7, 8, 9, 10, 11]
+];
+
 // Do not edit the code above.
 
 /*
@@ -169,5 +188,11 @@ var numsArr = [[1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */
 
 //Code Here
-
-
+const looper = () => {
+  for (i = 0; i < numsArr.length; i++) {
+    for (j = 0; j < numsArr[i].length; j++) {
+      numsArr[i][j] % 2 === 0 ? numsArr[i][j] = 'even' : numsArr[i][j] = 'odd';
+    }
+  }
+  return numsArr
+}

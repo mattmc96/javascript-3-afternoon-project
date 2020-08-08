@@ -10,11 +10,11 @@
 
 // Do not edit the code below.
 var carDetails = {
-  color: 'red',
-  make: 'toyota',
-  model: 'tacoma',
-  year: 1994
-}
+  color: "red",
+  make: "toyota",
+  model: "tacoma",
+  year: 1994,
+};
 // Do not edit the code above.
 
 /*
@@ -23,15 +23,13 @@ var carDetails = {
 
 //Code Here
 
-const { color } = carDetails
+const { color } = carDetails;
 
-const { make } = carDetails
+const { make } = carDetails;
 
-const { model } = carDetails
+const { model } = carDetails;
 
-const { year } = carDetails
-
-
+const { year } = carDetails;
 
 ////////// PROBLEM 2 //////////
 
@@ -43,14 +41,14 @@ const { year } = carDetails
 
 function greeting(obj) {
   //Code Here
-  const { firstName, lastName, title } = obj
+  const { firstName, lastName, title } = obj;
 
   // Do not edit the code below.
-  return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
+  return "Hello, " + title + " " + firstName + " " + lastName + "!";
   // Do not edit the code above.
 }
 
-
+//Thanks Scott!
 
 ////////// PROBLEM 3 //////////
 
@@ -64,11 +62,10 @@ function greeting(obj) {
 
 //Code Here
 function totalPopulation(obj) {
-  const { utah, texas, california, arizona } = obj
+  const { utah, texas, california, arizona } = obj;
 
-  return utah + texas + california + arizona
+  return utah + texas + california + arizona;
 }
-
 
 ////////// PROBLEM 4 //////////
 
@@ -82,13 +79,10 @@ function totalPopulation(obj) {
 
 //Code Here
 
-function ingredients(obj) {
-  const { carb, fat, protein } = obj
-  arr.push(element)
-  return arr
-
-}
-
+const ingredients = (obj) => {
+  const { carb, fat, protein } = obj;
+  return [carb, fat, protein];
+};
 ////////// PROBLEM 5 //////////
 
 /*
@@ -104,8 +98,9 @@ function ingredients(obj) {
 */
 
 //Code Here
-
-
+const largeNumbers = ({ first, second, third }) => {
+  return Math.min(first, second, third);
+};
 
 ////////// PROBLEM 6 //////////
 
@@ -116,5 +111,6 @@ function ingredients(obj) {
 */
 
 //Code Here
-
-
+const numberGroups = ({ a, b, c }) => {
+  return Math.max(a, b, c);
+};
