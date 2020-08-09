@@ -330,7 +330,7 @@ Use a high order method to create to get the sum of bobsTotal.
 
 let bobsTotal = purchases
   .filter((element) => {
-    return element.includes["Bob"];
+    return element.owner === "Bob";
   })
   .reduce((acc, curr) => {
     return acc + curr.price;
